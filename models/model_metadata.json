@@ -1,0 +1,58 @@
+{
+  "champion": "LightGBM Regressor (Poisson)",
+  "training_weeks": 58,
+  "test_weeks": 14,
+  "split_date": "2018-10-01 00:00:00",
+  "metrics_comparison": [
+    {
+      "Model": "Naive (Last Week)",
+      "MAE": 0.8438,
+      "RMSE": 1.9636,
+      "WAPE (%)": 66.82,
+      "Overstock Rate (%)": 19.85,
+      "Stockout Rate (%)": 20.03,
+      "Overstock Reduction (%)": 0.0,
+      "Stockout Reduction (%)": 0.0
+    },
+    {
+      "Model": "Moving Average (4-Week)",
+      "MAE": 0.7199,
+      "RMSE": 1.5092,
+      "WAPE (%)": 57.01,
+      "Overstock Rate (%)": 39.46,
+      "Stockout Rate (%)": 22.5,
+      "Overstock Reduction (%)": 13.31,
+      "Stockout Reduction (%)": 16.06
+    },
+    {
+      "Model": "LightGBM (Poisson)",
+      "MAE": 0.7628,
+      "RMSE": 1.7393,
+      "WAPE (%)": 60.41,
+      "Overstock Rate (%)": 71.96,
+      "Stockout Rate (%)": 28.04,
+      "Overstock Reduction (%)": 47.86,
+      "Stockout Reduction (%)": -29.3
+    },
+    {
+      "Model": "XGBoost (Poisson)",
+      "MAE": 0.7533,
+      "RMSE": 1.7207,
+      "WAPE (%)": 59.65,
+      "Overstock Rate (%)": 72.02,
+      "Stockout Rate (%)": 27.98,
+      "Overstock Reduction (%)": 50.07,
+      "Stockout Reduction (%)": -29.27
+    },
+    {
+      "Model": "Random Forest",
+      "MAE": 0.7176,
+      "RMSE": 1.5394,
+      "WAPE (%)": 56.83,
+      "Overstock Rate (%)": 74.49,
+      "Stockout Rate (%)": 25.51,
+      "Overstock Reduction (%)": 32.9,
+      "Stockout Reduction (%)": -3.29
+    }
+  ]
+}

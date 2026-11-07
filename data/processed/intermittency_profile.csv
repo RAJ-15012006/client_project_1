@@ -1,0 +1,241 @@
+service_centre,part_name,adi,cv2,demand_pattern
+SC-Central-East (Indiranagar Hub),3M OIL,1.14,0.27,Smooth
+SC-Central-East (Indiranagar Hub),AIR FILTER,1.04,0.33,Smooth
+SC-Central-East (Indiranagar Hub),BATTERY,5.69,0.06,Intermittent
+SC-Central-East (Indiranagar Hub),BRAKE SHOE,1.22,0.29,Smooth
+SC-Central-East (Indiranagar Hub),CHAIN SPROCKET,1.98,0.19,Intermittent
+SC-Central-East (Indiranagar Hub),CLUTCH ASSEMBLY,3.59,0.17,Intermittent
+SC-Central-East (Indiranagar Hub),CLUTCH CABLE,2.02,0.18,Intermittent
+SC-Central-East (Indiranagar Hub),CLUTCH COVER GASKET,3.16,0.27,Intermittent
+SC-Central-East (Indiranagar Hub),CLUTCH LEVER,5.57,0.11,Intermittent
+SC-Central-East (Indiranagar Hub),CONSUMABLES,1.14,0.35,Smooth
+SC-Central-East (Indiranagar Hub),COOLANT,4.73,0.36,Intermittent
+SC-Central-East (Indiranagar Hub),DISC OIL,1.34,0.54,Lumpy
+SC-Central-East (Indiranagar Hub),DISC PAD,1.67,0.32,Intermittent
+SC-Central-East (Indiranagar Hub),DISC PUMP KIT,5.62,0.21,Intermittent
+SC-Central-East (Indiranagar Hub),DRUM BOLT,10.86,0.12,Intermittent
+SC-Central-East (Indiranagar Hub),ENGINE OIL,1.0,0.18,Smooth
+SC-Central-East (Indiranagar Hub),FOOT REST,9.25,0.22,Intermittent
+SC-Central-East (Indiranagar Hub),FORK OIL,8.3,0.2,Intermittent
+SC-Central-East (Indiranagar Hub),INDICATOR,4.76,0.1,Intermittent
+SC-Central-East (Indiranagar Hub),MIRROR,7.09,0.0,Intermittent
+SC-Central-East (Indiranagar Hub),OIL FILTER,1.44,0.32,Intermittent
+SC-Central-East (Indiranagar Hub),POLISH,1.34,0.32,Intermittent
+SC-Central-East (Indiranagar Hub),SEAT COVER,6.27,0.0,Intermittent
+SC-Central-East (Indiranagar Hub),SPARK PLUG,2.19,0.44,Intermittent
+SC-Central-East (Indiranagar Hub),SPROCKET BEARING,4.65,0.62,Lumpy
+SC-Central-East (Indiranagar Hub),SPROCKET RUBBER,1.75,0.41,Intermittent
+SC-Central-East (Indiranagar Hub),TAIL LAMP BULB,5.0,0.08,Intermittent
+SC-Central-East (Indiranagar Hub),TANK COVER,7.0,0.23,Intermittent
+SC-Central-East (Indiranagar Hub),TENSIONER,6.11,0.0,Intermittent
+SC-Central-East (Indiranagar Hub),WHEEL RUBBER,1.58,0.23,Intermittent
+SC-Central-South (Koramangala Hub),3M OIL,7.2,0.07,Intermittent
+SC-Central-South (Koramangala Hub),AIR FILTER,1.39,0.28,Intermittent
+SC-Central-South (Koramangala Hub),BATTERY,7.75,0.0,Intermittent
+SC-Central-South (Koramangala Hub),BRAKE SHOE,2.08,0.27,Intermittent
+SC-Central-South (Koramangala Hub),CHAIN SPROCKET,3.35,0.12,Intermittent
+SC-Central-South (Koramangala Hub),CLUTCH ASSEMBLY,7.7,0.11,Intermittent
+SC-Central-South (Koramangala Hub),CLUTCH CABLE,2.79,0.11,Intermittent
+SC-Central-South (Koramangala Hub),CLUTCH COVER GASKET,12.83,0.12,Intermittent
+SC-Central-South (Koramangala Hub),CLUTCH LEVER,16.33,0.0,Intermittent
+SC-Central-South (Koramangala Hub),CONSUMABLES,7.27,0.07,Intermittent
+SC-Central-South (Koramangala Hub),COOLANT,8.0,0.0,Intermittent
+SC-Central-South (Koramangala Hub),DISC OIL,1.68,0.29,Intermittent
+SC-Central-South (Koramangala Hub),DISC PAD,2.23,0.18,Intermittent
+SC-Central-South (Koramangala Hub),DISC PUMP KIT,16.67,0.0,Intermittent
+SC-Central-South (Koramangala Hub),DRUM BOLT,7.33,0.09,Intermittent
+SC-Central-South (Koramangala Hub),ENGINE OIL,1.21,0.26,Smooth
+SC-Central-South (Koramangala Hub),FOOT REST,6.42,0.06,Intermittent
+SC-Central-South (Koramangala Hub),FORK OIL,10.6,0.0,Intermittent
+SC-Central-South (Koramangala Hub),INDICATOR,8.38,0.0,Intermittent
+SC-Central-South (Koramangala Hub),MIRROR,8.57,0.09,Intermittent
+SC-Central-South (Koramangala Hub),OIL FILTER,2.55,0.15,Intermittent
+SC-Central-South (Koramangala Hub),POLISH,9.0,0.08,Intermittent
+SC-Central-South (Koramangala Hub),SEAT COVER,11.33,0.0,Intermittent
+SC-Central-South (Koramangala Hub),SPARK PLUG,3.27,0.21,Intermittent
+SC-Central-South (Koramangala Hub),SPROCKET BEARING,4.67,0.39,Intermittent
+SC-Central-South (Koramangala Hub),SPROCKET RUBBER,1.17,0.3,Smooth
+SC-Central-South (Koramangala Hub),TAIL LAMP BULB,10.25,0.0,Intermittent
+SC-Central-South (Koramangala Hub),TANK COVER,9.5,0.11,Intermittent
+SC-Central-South (Koramangala Hub),TENSIONER,15.25,0.0,Intermittent
+SC-Central-South (Koramangala Hub),WHEEL RUBBER,3.95,0.0,Intermittent
+SC-East (KR Puram Hub),3M OIL,1.0,0.11,Smooth
+SC-East (KR Puram Hub),AIR FILTER,1.08,0.25,Smooth
+SC-East (KR Puram Hub),BATTERY,4.21,0.11,Intermittent
+SC-East (KR Puram Hub),BRAKE SHOE,1.04,0.33,Smooth
+SC-East (KR Puram Hub),CHAIN SPROCKET,1.14,0.36,Smooth
+SC-East (KR Puram Hub),CLUTCH ASSEMBLY,1.8,0.35,Intermittent
+SC-East (KR Puram Hub),CLUTCH CABLE,1.36,0.32,Intermittent
+SC-East (KR Puram Hub),CLUTCH COVER GASKET,1.65,0.41,Intermittent
+SC-East (KR Puram Hub),CLUTCH LEVER,2.56,0.08,Intermittent
+SC-East (KR Puram Hub),CONSUMABLES,1.0,0.12,Smooth
+SC-East (KR Puram Hub),COOLANT,2.58,0.19,Intermittent
+SC-East (KR Puram Hub),DISC OIL,1.02,0.41,Smooth
+SC-East (KR Puram Hub),DISC PAD,1.12,0.31,Smooth
+SC-East (KR Puram Hub),DISC PUMP KIT,2.71,0.41,Intermittent
+SC-East (KR Puram Hub),DRUM BOLT,3.28,0.36,Intermittent
+SC-East (KR Puram Hub),ENGINE OIL,1.0,0.07,Smooth
+SC-East (KR Puram Hub),FOOT REST,2.76,0.25,Intermittent
+SC-East (KR Puram Hub),FORK OIL,3.57,0.33,Intermittent
+SC-East (KR Puram Hub),INDICATOR,2.53,0.16,Intermittent
+SC-East (KR Puram Hub),MIRROR,2.16,0.1,Intermittent
+SC-East (KR Puram Hub),OIL FILTER,1.06,0.32,Smooth
+SC-East (KR Puram Hub),POLISH,1.0,0.22,Smooth
+SC-East (KR Puram Hub),SEAT COVER,2.37,0.26,Intermittent
+SC-East (KR Puram Hub),SPARK PLUG,1.71,0.49,Lumpy
+SC-East (KR Puram Hub),SPROCKET BEARING,2.2,0.22,Intermittent
+SC-East (KR Puram Hub),SPROCKET RUBBER,2.11,0.21,Intermittent
+SC-East (KR Puram Hub),TAIL LAMP BULB,2.37,0.2,Intermittent
+SC-East (KR Puram Hub),TANK COVER,1.64,0.36,Intermittent
+SC-East (KR Puram Hub),TENSIONER,5.33,0.09,Intermittent
+SC-East (KR Puram Hub),WHEEL RUBBER,1.18,0.36,Smooth
+SC-Metro-Satellite Hub,3M OIL,1.21,0.31,Smooth
+SC-Metro-Satellite Hub,AIR FILTER,1.09,0.28,Smooth
+SC-Metro-Satellite Hub,BATTERY,3.75,0.12,Intermittent
+SC-Metro-Satellite Hub,BRAKE SHOE,1.19,0.44,Smooth
+SC-Metro-Satellite Hub,CHAIN SPROCKET,1.61,0.34,Intermittent
+SC-Metro-Satellite Hub,CLUTCH ASSEMBLY,2.1,0.27,Intermittent
+SC-Metro-Satellite Hub,CLUTCH CABLE,1.45,0.32,Intermittent
+SC-Metro-Satellite Hub,CLUTCH COVER GASKET,2.77,0.22,Intermittent
+SC-Metro-Satellite Hub,CLUTCH LEVER,3.26,0.17,Intermittent
+SC-Metro-Satellite Hub,CONSUMABLES,1.17,0.34,Smooth
+SC-Metro-Satellite Hub,COOLANT,6.0,0.12,Intermittent
+SC-Metro-Satellite Hub,DISC OIL,1.17,0.37,Smooth
+SC-Metro-Satellite Hub,DISC PAD,1.44,0.21,Intermittent
+SC-Metro-Satellite Hub,DISC PUMP KIT,2.92,0.1,Intermittent
+SC-Metro-Satellite Hub,DRUM BOLT,3.67,0.11,Intermittent
+SC-Metro-Satellite Hub,ENGINE OIL,1.0,0.15,Smooth
+SC-Metro-Satellite Hub,FOOT REST,4.76,0.18,Intermittent
+SC-Metro-Satellite Hub,FORK OIL,3.32,0.09,Intermittent
+SC-Metro-Satellite Hub,INDICATOR,4.1,0.09,Intermittent
+SC-Metro-Satellite Hub,MIRROR,5.92,0.59,Lumpy
+SC-Metro-Satellite Hub,OIL FILTER,1.37,0.28,Intermittent
+SC-Metro-Satellite Hub,POLISH,1.34,0.34,Intermittent
+SC-Metro-Satellite Hub,SEAT COVER,3.26,0.12,Intermittent
+SC-Metro-Satellite Hub,SPARK PLUG,1.58,0.48,Intermittent
+SC-Metro-Satellite Hub,SPROCKET BEARING,4.22,0.35,Intermittent
+SC-Metro-Satellite Hub,SPROCKET RUBBER,1.35,0.25,Intermittent
+SC-Metro-Satellite Hub,TAIL LAMP BULB,3.82,0.08,Intermittent
+SC-Metro-Satellite Hub,TANK COVER,3.35,0.1,Intermittent
+SC-Metro-Satellite Hub,TENSIONER,3.33,0.22,Intermittent
+SC-Metro-Satellite Hub,WHEEL RUBBER,1.33,0.36,Intermittent
+SC-North (Yeshwanthpur Hub),3M OIL,8.0,0.09,Intermittent
+SC-North (Yeshwanthpur Hub),AIR FILTER,2.41,0.16,Intermittent
+SC-North (Yeshwanthpur Hub),BATTERY,999.0,999.0,Lumpy
+SC-North (Yeshwanthpur Hub),BRAKE SHOE,3.3,0.2,Intermittent
+SC-North (Yeshwanthpur Hub),CHAIN SPROCKET,8.75,0.12,Intermittent
+SC-North (Yeshwanthpur Hub),CLUTCH ASSEMBLY,11.0,0.0,Intermittent
+SC-North (Yeshwanthpur Hub),CLUTCH CABLE,8.71,0.0,Intermittent
+SC-North (Yeshwanthpur Hub),CLUTCH COVER GASKET,20.0,0.0,Intermittent
+SC-North (Yeshwanthpur Hub),CLUTCH LEVER,999.0,999.0,Lumpy
+SC-North (Yeshwanthpur Hub),CONSUMABLES,10.5,0.09,Intermittent
+SC-North (Yeshwanthpur Hub),COOLANT,4.5,0.0,Intermittent
+SC-North (Yeshwanthpur Hub),DISC OIL,5.5,0.09,Intermittent
+SC-North (Yeshwanthpur Hub),DISC PAD,8.44,0.0,Intermittent
+SC-North (Yeshwanthpur Hub),DISC PUMP KIT,38.0,0.13,Intermittent
+SC-North (Yeshwanthpur Hub),DRUM BOLT,6.0,0.11,Intermittent
+SC-North (Yeshwanthpur Hub),ENGINE OIL,1.75,0.24,Intermittent
+SC-North (Yeshwanthpur Hub),FOOT REST,999.0,999.0,Lumpy
+SC-North (Yeshwanthpur Hub),FORK OIL,999.0,999.0,Lumpy
+SC-North (Yeshwanthpur Hub),INDICATOR,4.0,0.0,Intermittent
+SC-North (Yeshwanthpur Hub),MIRROR,14.5,0.0,Intermittent
+SC-North (Yeshwanthpur Hub),OIL FILTER,4.29,0.05,Intermittent
+SC-North (Yeshwanthpur Hub),POLISH,14.67,0.0,Intermittent
+SC-North (Yeshwanthpur Hub),SEAT COVER,23.5,0.0,Intermittent
+SC-North (Yeshwanthpur Hub),SPARK PLUG,15.75,0.12,Intermittent
+SC-North (Yeshwanthpur Hub),SPROCKET BEARING,10.75,0.0,Intermittent
+SC-North (Yeshwanthpur Hub),SPROCKET RUBBER,3.33,0.0,Intermittent
+SC-North (Yeshwanthpur Hub),TAIL LAMP BULB,999.0,999.0,Lumpy
+SC-North (Yeshwanthpur Hub),TANK COVER,18.75,0.0,Intermittent
+SC-North (Yeshwanthpur Hub),TENSIONER,14.25,0.0,Intermittent
+SC-North (Yeshwanthpur Hub),WHEEL RUBBER,4.06,0.19,Intermittent
+SC-South-East (Electronic City Hub),3M OIL,9.11,0.07,Intermittent
+SC-South-East (Electronic City Hub),AIR FILTER,2.02,0.3,Intermittent
+SC-South-East (Electronic City Hub),BATTERY,24.33,0.0,Intermittent
+SC-South-East (Electronic City Hub),BRAKE SHOE,2.89,0.33,Intermittent
+SC-South-East (Electronic City Hub),CHAIN SPROCKET,5.69,0.09,Intermittent
+SC-South-East (Electronic City Hub),CLUTCH ASSEMBLY,5.2,0.05,Intermittent
+SC-South-East (Electronic City Hub),CLUTCH CABLE,5.29,0.11,Intermittent
+SC-South-East (Electronic City Hub),CLUTCH COVER GASKET,6.22,0.0,Intermittent
+SC-South-East (Electronic City Hub),CLUTCH LEVER,15.0,0.0,Intermittent
+SC-South-East (Electronic City Hub),CONSUMABLES,10.86,0.09,Intermittent
+SC-South-East (Electronic City Hub),COOLANT,999.0,999.0,Lumpy
+SC-South-East (Electronic City Hub),DISC OIL,2.69,0.27,Intermittent
+SC-South-East (Electronic City Hub),DISC PAD,4.41,0.08,Intermittent
+SC-South-East (Electronic City Hub),DISC PUMP KIT,10.5,0.0,Intermittent
+SC-South-East (Electronic City Hub),DRUM BOLT,5.67,0.3,Intermittent
+SC-South-East (Electronic City Hub),ENGINE OIL,1.46,0.29,Intermittent
+SC-South-East (Electronic City Hub),FOOT REST,999.0,999.0,Lumpy
+SC-South-East (Electronic City Hub),FORK OIL,4.0,0.11,Intermittent
+SC-South-East (Electronic City Hub),INDICATOR,12.0,0.0,Intermittent
+SC-South-East (Electronic City Hub),MIRROR,51.0,0.0,Intermittent
+SC-South-East (Electronic City Hub),OIL FILTER,3.04,0.11,Intermittent
+SC-South-East (Electronic City Hub),POLISH,15.2,0.1,Intermittent
+SC-South-East (Electronic City Hub),SEAT COVER,23.0,0.0,Intermittent
+SC-South-East (Electronic City Hub),SPARK PLUG,3.71,0.11,Intermittent
+SC-South-East (Electronic City Hub),SPROCKET BEARING,1.38,0.1,Intermittent
+SC-South-East (Electronic City Hub),SPROCKET RUBBER,1.38,0.09,Intermittent
+SC-South-East (Electronic City Hub),TAIL LAMP BULB,30.0,0.0,Intermittent
+SC-South-East (Electronic City Hub),TANK COVER,999.0,999.0,Lumpy
+SC-South-East (Electronic City Hub),TENSIONER,13.0,0.09,Intermittent
+SC-South-East (Electronic City Hub),WHEEL RUBBER,6.08,0.06,Intermittent
+SC-South-West (Jayanagar Hub),3M OIL,7.29,0.0,Intermittent
+SC-South-West (Jayanagar Hub),AIR FILTER,3.04,0.12,Intermittent
+SC-South-West (Jayanagar Hub),BATTERY,15.0,0.0,Intermittent
+SC-South-West (Jayanagar Hub),BRAKE SHOE,5.07,0.2,Intermittent
+SC-South-West (Jayanagar Hub),CHAIN SPROCKET,7.78,0.07,Intermittent
+SC-South-West (Jayanagar Hub),CLUTCH ASSEMBLY,20.0,0.11,Intermittent
+SC-South-West (Jayanagar Hub),CLUTCH CABLE,13.67,0.0,Intermittent
+SC-South-West (Jayanagar Hub),CLUTCH COVER GASKET,23.0,0.0,Intermittent
+SC-South-West (Jayanagar Hub),CLUTCH LEVER,999.0,999.0,Lumpy
+SC-South-West (Jayanagar Hub),CONSUMABLES,10.57,0.0,Intermittent
+SC-South-West (Jayanagar Hub),COOLANT,15.0,0.0,Intermittent
+SC-South-West (Jayanagar Hub),DISC OIL,5.33,0.05,Intermittent
+SC-South-West (Jayanagar Hub),DISC PAD,5.12,0.28,Intermittent
+SC-South-West (Jayanagar Hub),DISC PUMP KIT,39.0,0.0,Intermittent
+SC-South-West (Jayanagar Hub),DRUM BOLT,48.0,0.0,Intermittent
+SC-South-West (Jayanagar Hub),ENGINE OIL,2.1,0.33,Intermittent
+SC-South-West (Jayanagar Hub),FOOT REST,24.33,0.0,Intermittent
+SC-South-West (Jayanagar Hub),FORK OIL,20.0,0.0,Intermittent
+SC-South-West (Jayanagar Hub),INDICATOR,7.5,0.13,Intermittent
+SC-South-West (Jayanagar Hub),MIRROR,999.0,999.0,Lumpy
+SC-South-West (Jayanagar Hub),OIL FILTER,5.92,0.09,Intermittent
+SC-South-West (Jayanagar Hub),POLISH,12.75,0.0,Intermittent
+SC-South-West (Jayanagar Hub),SEAT COVER,36.0,0.13,Intermittent
+SC-South-West (Jayanagar Hub),SPARK PLUG,5.71,0.09,Intermittent
+SC-South-West (Jayanagar Hub),SPROCKET BEARING,4.0,0.11,Intermittent
+SC-South-West (Jayanagar Hub),SPROCKET RUBBER,3.2,0.13,Intermittent
+SC-South-West (Jayanagar Hub),TAIL LAMP BULB,999.0,999.0,Lumpy
+SC-South-West (Jayanagar Hub),TANK COVER,41.0,0.0,Intermittent
+SC-South-West (Jayanagar Hub),TENSIONER,80.0,0.0,Intermittent
+SC-South-West (Jayanagar Hub),WHEEL RUBBER,6.2,0.07,Intermittent
+SC-West (Rajajinagar Hub),3M OIL,9.11,0.0,Intermittent
+SC-West (Rajajinagar Hub),AIR FILTER,3.17,0.11,Intermittent
+SC-West (Rajajinagar Hub),BATTERY,999.0,999.0,Lumpy
+SC-West (Rajajinagar Hub),BRAKE SHOE,8.2,0.11,Intermittent
+SC-West (Rajajinagar Hub),CHAIN SPROCKET,6.83,0.0,Intermittent
+SC-West (Rajajinagar Hub),CLUTCH ASSEMBLY,999.0,999.0,Lumpy
+SC-West (Rajajinagar Hub),CLUTCH CABLE,16.0,0.0,Intermittent
+SC-West (Rajajinagar Hub),CLUTCH COVER GASKET,17.0,0.0,Intermittent
+SC-West (Rajajinagar Hub),CLUTCH LEVER,999.0,999.0,Lumpy
+SC-West (Rajajinagar Hub),CONSUMABLES,9.11,0.0,Intermittent
+SC-West (Rajajinagar Hub),COOLANT,999.0,999.0,Lumpy
+SC-West (Rajajinagar Hub),DISC OIL,5.4,0.09,Intermittent
+SC-West (Rajajinagar Hub),DISC PAD,8.62,0.08,Intermittent
+SC-West (Rajajinagar Hub),DISC PUMP KIT,999.0,999.0,Lumpy
+SC-West (Rajajinagar Hub),DRUM BOLT,3.0,0.0,Intermittent
+SC-West (Rajajinagar Hub),ENGINE OIL,2.24,0.22,Intermittent
+SC-West (Rajajinagar Hub),FOOT REST,31.0,0.0,Intermittent
+SC-West (Rajajinagar Hub),FORK OIL,999.0,999.0,Lumpy
+SC-West (Rajajinagar Hub),INDICATOR,63.0,0.0,Intermittent
+SC-West (Rajajinagar Hub),MIRROR,999.0,999.0,Lumpy
+SC-West (Rajajinagar Hub),OIL FILTER,6.82,0.1,Intermittent
+SC-West (Rajajinagar Hub),POLISH,12.0,0.0,Intermittent
+SC-West (Rajajinagar Hub),SEAT COVER,11.0,0.0,Intermittent
+SC-West (Rajajinagar Hub),SPARK PLUG,13.0,0.09,Intermittent
+SC-West (Rajajinagar Hub),SPROCKET BEARING,9.83,0.0,Intermittent
+SC-West (Rajajinagar Hub),SPROCKET RUBBER,3.25,0.0,Intermittent
+SC-West (Rajajinagar Hub),TAIL LAMP BULB,6.0,0.0,Intermittent
+SC-West (Rajajinagar Hub),TANK COVER,46.0,0.0,Intermittent
+SC-West (Rajajinagar Hub),TENSIONER,999.0,999.0,Lumpy
+SC-West (Rajajinagar Hub),WHEEL RUBBER,5.42,0.06,Intermittent

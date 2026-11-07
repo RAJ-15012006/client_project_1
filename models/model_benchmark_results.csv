@@ -1,0 +1,6 @@
+Model,MAE,RMSE,WAPE (%),Overstock Rate (%),Stockout Rate (%),Overstock Reduction (%),Stockout Reduction (%)
+Naive (Last Week),0.8438,1.9636,66.82,19.85,20.03,0.0,0.0
+Moving Average (4-Week),0.7199,1.5092,57.01,39.46,22.5,13.31,16.06
+LightGBM (Poisson),0.7628,1.7393,60.41,71.96,28.04,47.86,-29.3
+XGBoost (Poisson),0.7533,1.7207,59.65,72.02,27.98,50.07,-29.27
+Random Forest,0.7176,1.5394,56.83,74.49,25.51,32.9,-3.29
