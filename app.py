@@ -134,9 +134,11 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ----------------- DATA LOADING -----------------
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 @st.cache_data
 def load_forecast_data():
-    forecast_path = 'data/forecast_output.csv'
+    forecast_path = os.path.join(BASE_DIR, 'data', 'forecast_output.csv')
     if not os.path.exists(forecast_path):
         st.error(f"Deliverable file '{forecast_path}' not found. Please run the training pipeline first.")
         st.stop()
@@ -146,14 +148,14 @@ def load_forecast_data():
 
 @st.cache_data
 def load_intermittency_profile():
-    path = 'data/processed/intermittency_profile.csv'
+    path = os.path.join(BASE_DIR, 'data', 'processed', 'intermittency_profile.csv')
     if os.path.exists(path):
         return pd.read_csv(path)
     return None
 
 @st.cache_data
 def load_benchmark_metrics():
-    path = 'models/model_benchmark_results.csv'
+    path = os.path.join(BASE_DIR, 'models', 'model_benchmark_results.csv')
     if os.path.exists(path):
         return pd.read_csv(path)
     return None
