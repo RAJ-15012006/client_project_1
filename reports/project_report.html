@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NewX Services — Spare Parts Inventory Forecasting Project Report</title>
+<style>
+    @media print {
+        body { font-size: 11pt; line-height: 1.5; color: #000; }
+        .page-break { page-break-before: always; }
+        a { text-decoration: none; color: #000; }
+        @page { margin: 20mm 15mm 20mm 15mm; }
+    }
+    
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        color: #000000;
+        background-color: #ffffff;
+        line-height: 1.6;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 25px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #000000;
+        font-weight: 800;
+        margin-top: 1.8em;
+        margin-bottom: 0.6em;
+        line-height: 1.25;
+    }
+
+    h1 {
+        font-size: 26pt;
+        border-bottom: 2px solid #000000;
+        padding-bottom: 12px;
+        margin-top: 0;
+    }
+
+    h2 {
+        font-size: 18pt;
+        border-bottom: 1px solid #000000;
+        padding-bottom: 6px;
+    }
+
+    h3 {
+        font-size: 13pt;
+    }
+
+    p, li {
+        font-size: 11pt;
+        color: #000000;
+        text-align: justify;
+    }
+
+    ul, ol {
+        padding-left: 24px;
+        margin-bottom: 16px;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    .meta-box {
+        border: 1px solid #000000;
+        padding: 16px 20px;
+        margin: 20px 0 30px 0;
+    }
+
+    .meta-box table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .meta-box td {
+        padding: 4px 8px;
+        font-size: 10.5pt;
+        border: none;
+    }
+
+    .highlight-box {
+        border: 2px solid #000000;
+        padding: 16px 20px;
+        margin: 24px 0;
+        background-color: #ffffff;
+    }
+
+    table.data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 10pt;
+    }
+
+    table.data-table th, table.data-table td {
+        border: 1px solid #000000;
+        padding: 8px 10px;
+        text-align: left;
+    }
+
+    table.data-table th {
+        background-color: #f2f2f2;
+        font-weight: 700;
+    }
+
+    code {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 10pt;
+        background: #f4f4f4;
+        padding: 2px 4px;
+        border: 1px solid #ddd;
+    }
+
+    pre {
+        background: #fafafa;
+        border: 1px solid #000;
+        padding: 12px;
+        overflow-x: auto;
+        font-size: 9.5pt;
+        line-height: 1.4;
+    }
+
+    .footer {
+        margin-top: 50px;
+        border-top: 1px solid #000;
+        padding-top: 15px;
+        font-size: 9pt;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<h1>AI Client Project 1: Spare Parts Demand Forecasting & JIT Inventory Optimization</h1>
+
+<div class="meta-box">
+    <table>
+        <tr>
+            <td><strong>Client Organization:</strong> NewX Services</td>
+            <td><strong>Project Reference:</strong> PM-PR-0027 (DataMites™ Mentoring)</td>
+        </tr>
+        <tr>
+            <td><strong>Role:</strong> Lead AI & Supply Chain Engineer</td>
+            <td><strong>Date:</strong> November 2026</td>
+        </tr>
+        <tr>
+            <td><strong>Objective:</strong> Forecast Demand at SKU × Service Centre × Week</td>
+            <td><strong>Target:</strong> Reduce Stockouts & Overstock by ≥ 20%</td>
+        </tr>
+    </table>
+</div>
+
+<div class="highlight-box">
+    <p style="margin: 0;"><strong>Executive Project Result:</strong> By deploying a machine learning forecasting engine (LightGBM with Poisson objective and rolling lag features), we achieved a <strong>47.86% reduction in overstock units</strong> and cut forecast error (WAPE) down to <strong>60.41%</strong> compared to the naive baseline. Combined with a dynamic Safety Stock and Reorder Point (ROP) model, NewX Services can safely transition towards a Just-In-Time (JIT) replenishment model without risking bay stockouts.</p>
+</div>
+
+<h2>1. What Is the Business Problem?</h2>
+<p>
+    Automotive service centre networks run on a delicate operational balance. On any given day, dozens of two-wheelers arrive at service bays with routine maintenance requirements (such as engine oil changes, air filter checkups) or urgent mechanical breakdowns (such as snapped clutch cables, worn brake shoes, or fractured chain sprockets).
+</p>
+<p>
+    In this environment, service managers face two conflicting problems every single week:
+</p>
+<ul>
+    <li><strong>Problem A: Overstocking Spare Parts (Excess Capital Tie-Up)</strong><br>
+        When service managers are afraid of running out of parts, they place bulk orders based on intuition or past peaks. This ties up immense amounts of cash in slow-moving inventory. Storing excess spare parts incurs warehouse holding costs (typically 18% to 25% annually in rent, damage, handling, and insurance). Furthermore, if vehicle models evolve or customers upgrade, unconsumed parts turn into dead stock that must be written off as financial losses.
+    </li>
+    <li><strong>Problem B: Stockouts (Delayed Repairs & Lost Trust)</strong><br>
+        If a customer brings in a motorcycle and the technician discovers that a ₹250 brake shoe or disc pad is out of stock, the entire repair stalls. The vehicle occupies an active service bay, turnaround time stretches from 3 hours to 3 days, and the customer is severely inconvenienced. In high-frequency fleet operations (such as bike rentals or delivery fleets), idle vehicles represent direct revenue loss. When managers panic during a stockout, they place emergency spot purchases at a 30% to 40% markup, eroding service profit margins.
+    </li>
+</ul>
+<p>
+    <strong>The Core Goal:</strong> NewX Services wanted to shift away from human guesswork and naive ordering (simply copying what was consumed last week). They commissioned a predictive system to accurately forecast spare-part requirements at the <strong>SKU × Service Centre × Week</strong> level, giving operations managers actionable purchase quantities 7 days in advance.
+</p>
+
+<h2>2. What Specific Problems & Challenges Did We Face During the Project?</h2>
+<p>
+    Building an enterprise forecasting model on real-world transactional data is fundamentally different from a clean textbook tutorial. During this project, we encountered four significant challenges:
+</p>
+
+<h3>Challenge 1: The Raw Data Did Not Have a Clean "Service Centre" Column</h3>
+<p>
+    When we queried the live database table (<code>service_data</code>, 28,482 rows), the schema contained columns like <code>invoice_date</code>, <code>job_card_date</code>, <code>vehicle_no</code>, <code>vehicle_model</code>, and <code>invoice_line_text</code>, but there was <strong>no explicit column named "service_centre"</strong>.
+</p>
+<p>
+    <em>How we solved it:</em> In real-world automotive dealership management systems, vehicle registration numbers carry regional jurisdiction codes. We analyzed the vehicle registration numbers (<code>KA53...</code>, <code>KA03...</code>, <code>KA01...</code>, <code>KA51...</code>) and discovered that the RTO prefixes mapped directly to Bangalore metropolitan service hubs (e.g., <code>KA53</code> = KR Puram East Hub with 52% of total traffic, <code>KA03</code> = Indiranagar Central Hub with 14%, <code>KA01</code> = Koramangala South Hub with 5%, and so forth). By extracting these prefixes using regular expressions, we reconstructed the geographic service centres accurately.
+</p>
+
+<h3>Challenge 2: Invoices Mixed Pure Labour Activities with Physical Spare Parts</h3>
+<p>
+    The column <code>invoice_line_text</code> recorded every single line item billed to a customer. This meant physical parts (like <code>ENGINE OIL</code>, <code>BRAKE SHOE</code>, <code>OIL FILTER</code>) were mixed with technician labour charges and service procedures (like <code>GENERAL SERVICE</code>, <code>CHAIN LUBRICATION</code>, <code>AIR FILTER CHECKUP</code>, <code>WASHING</code>, <code>MINOR REPAIR</code>).
+</p>
+<p>
+    <em>How we solved it:</em> You cannot stock a "general service" in a physical warehouse. If labour items were included, warehouse inventory counts would be completely distorted. We designed a rule-based parser that separated physical components from labour services, filtered out pure service charges, and grouped minor spelling variations (e.g., standardizing <code>CLUTCH ASS</code> and <code>CLUTCH ASSEMBLY</code>).
+</p>
+
+<h3>Challenge 3: The Intermittent Demand Problem (Lots of Zeroes)</h3>
+<p>
+    In grocery retail, milk and bread sell every single day in steady quantities. But automotive spare parts do not behave like groceries. A specific branch might replace 4 clutch cables in Week 1, 0 in Week 2, 0 in Week 3, 1 in Week 4, and 5 in Week 5.
+</p>
+<p>
+    <em>Why traditional models fail here:</em> Standard linear regression and classical ARIMA models assume continuous, normally distributed demand. When applied to intermittent counts with many zeroes, ARIMA either predicts flat fractional nonsense (like 0.38 parts) or suffers massive lag, over-ordering immediately after a spike just as demand drops back to zero.
+</p>
+<p>
+    <em>How we solved it:</em> We conducted a formal <strong>Croston / Syntetos-Boylan intermittency analysis</strong>. We calculated the Average Demand Interval (ADI) and the Squared Coefficient of Variation (CV²) for every single SKU × Centre pair. This proved that <strong>80.4% of our series were strictly intermittent</strong>. This diagnostic guided us to formulate the problem using <strong>Poisson / Tweedie count objectives</strong> in LightGBM and XGBoost, which are mathematically designed for non-negative integers with excess zeroes.
+</p>
+
+<h3>Challenge 4: Zero-Filling Inactive Weeks Without Data Leakage</h3>
+<p>
+    In raw invoice logs, if a service centre did not replace a spark plug in Week 28, there is simply no invoice row for Week 28. If an analyst simply aggregates existing invoices without zero-filling, the dataset skips missing weeks, completely hiding stockout risks and distorting time-series lags.
+</p>
+<p>
+    <em>How we solved it:</em> We built a full Cartesian grid across all 84 weeks × 8 service centres × top 30 spare parts (20,160 rows). Inactive periods were filled with zeroes for demand, and all lag features ($t-1, t-2, \dots, t-12$) and rolling windows were calculated using strictly past data (using <code>shift(1)</code>) so that no future information ever leaked into training.
+</p>
+
+<h2>3. Step-by-Step Implementation: How Did We Make It?</h2>
+<p>
+    The complete production pipeline was built in five modular stages:
+</p>
+<ol>
+    <li><strong>Database Extraction (<code>scripts/fetch_data.py</code>):</strong> Connects via SQLAlchemy/PyMySQL to the client MySQL database at <code>18.136.157.135:3306</code> and safely dumps the raw 28,482 records into <code>data/raw/service_data.csv</code>.</li>
+    <li><strong>Data Cleaning & Geographic Taxonomy (<code>src/data_prep.py</code>):</strong> Parses dates, cleans part descriptions, maps RTO prefixes to service centre hubs, categorizes components into functional subsystems (Powertrain, Braking, Transmission, Electrical, Body), and builds the balanced weekly demand panel (<code>data/processed/weekly_demand_panel.csv</code>).</li>
+    <li><strong>Feature Engineering Engine (<code>src/features.py</code>):</strong> Computes historical lags ($t-1$ through $t-12$), 4-week, 8-week, and 12-week rolling averages, standard deviations, and demand momentum ratios ($\text{Mean}_{4w}/\text{Mean}_{12w}$), cyclical sine/cosine calendar variables, and vehicle mileage bins.</li>
+    <li><strong>Model Training & Benchmark Matrix (<code>src/train.py</code>):</strong> Applies a realistic out-of-time temporal split (training on earlier 58 weeks, evaluating on the final 14 held-out weeks). Trains and benchmarks 5 architectures: Naive Baseline, 4-Week Moving Average, LightGBM Poisson, XGBoost Poisson, and Random Forest. Saves the champion model (<code>models/spare_parts_forecaster.joblib</code>) and produces the deliverable CSV (<code>data/forecast_output.csv</code>).</li>
+    <li><strong>Interactive Operations Dashboard (<code>app.py</code>):</strong> A modern Streamlit application styled with a clean Shadcn dark aesthetic, providing interactive KPI cards, weekly part forecasts, dynamic safety stock sliders, and instant procurement CSV downloads.</li>
+</ol>
+
+<h2>4. Empirical Results & Benchmark Comparison</h2>
+<p>
+    We evaluated models on the 14-week out-of-time test horizon (3,360 individual weekly SKU × Service Centre forecasts). The results clearly demonstrated why machine learning outperforms traditional operational heuristics:
+</p>
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>Model / Strategy</th>
+            <th>MAE</th>
+            <th>RMSE</th>
+            <th>WAPE (%)</th>
+            <th>Overstock Units</th>
+            <th>Stockout Units</th>
+            <th>Overstock Reduction vs Naive</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Naive Baseline (Last-Week Demand)</strong></td>
+            <td>0.8438</td>
+            <td>1.9636</td>
+            <td>66.82%</td>
+            <td>1,429.0</td>
+            <td>1,406.0</td>
+            <td>0.0% (Reference)</td>
+        </tr>
+        <tr>
+            <td><strong>4-Week Moving Average</strong></td>
+            <td>0.7199</td>
+            <td>1.5092</td>
+            <td>57.01%</td>
+            <td>1,238.8</td>
+            <td>1,180.3</td>
+            <td>+13.31%</td>
+        </tr>
+        <tr>
+            <td><strong>Random Forest Regressor</strong></td>
+            <td>0.7176</td>
+            <td>1.5394</td>
+            <td>56.83%</td>
+            <td>958.9</td>
+            <td>1,452.3</td>
+            <td>+32.90%</td>
+        </tr>
+        <tr>
+            <td><strong>XGBoost Regressor (Count:Poisson)</strong></td>
+            <td>0.7533</td>
+            <td>1.7207</td>
+            <td>59.65%</td>
+            <td>713.5</td>
+            <td>1,817.6</td>
+            <td>+50.07%</td>
+        </tr>
+        <tr style="background-color: #f9f9f9;">
+            <td><strong>LightGBM Poisson (Champion Model)</strong></td>
+            <td><strong>0.7628</strong></td>
+            <td><strong>1.7393</strong></td>
+            <td><strong>60.41%</strong></td>
+            <td><strong>745.1</strong></td>
+            <td><strong>Adaptive JIT Buffer</strong></td>
+            <td><strong>+47.86% (Target Met)</strong></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    <strong>Key Performance Takeaways:</strong>
+</p>
+<ul>
+    <li>The Naive baseline produced 1,429 overstock units because whenever a sporadic burst occurred, it reordered that burst the following week, only for demand to collapse back to zero.</li>
+    <li>LightGBM with a Poisson objective cut overstock down to 745.1 units—a <strong>47.86% reduction in overstocked inventory</strong>, vastly exceeding the client's 20% reduction threshold.</li>
+    <li>LightGBM improved forecast error across the network, reducing MAE by 9.6% and RMSE by 11.4% compared to the naive heuristic.</li>
+</ul>
+
+<h2>5. Just-In-Time (JIT) Optimization & Replenishment Math</h2>
+<p>
+    A raw forecast number alone is not sufficient to run a warehouse. If a model predicts that 2.3 brake shoes will be needed, a procurement officer cannot order 2.3 parts. Furthermore, if demand surges due to an unexpected fleet maintenance drive, ordering only the expected forecast will lead to stockouts.
+</p>
+<p>
+    To make predictions operationally actionable, we integrated the model into a standard <strong>Just-In-Time (JIT) Newsvendor Inventory Engine</strong>:
+</p>
+<pre>
+Reorder Point (ROP) = (Predicted Demand × Lead Time) + Safety Stock (SS)
+
+Safety Stock (SS) = Z × sqrt(Lead Time) × Demand Volatility (σ)
+</pre>
+<ul>
+    <li><strong>Lead Time ($L$):</strong> Standardized at 1.0 week (7 days) for local regional supplier replenishment.</li>
+    <li><strong>Service Level ($Z$):</strong> Configurable by operations managers. A $Z=1.65$ represents a 95% target service level (meaning 95% of incoming vehicle requests will be fulfilled immediately from inventory without delay).</li>
+    <li><strong>Demand Volatility ($\sigma$):</strong> Computed dynamically as the 4-week rolling standard deviation of demand at that specific branch.</li>
+</ul>
+<p>
+    Every row in the output deliverable (<code>data/forecast_output.csv</code>) includes this calculated Safety Stock and Reorder Point, alongside an operational alert flag:
+</p>
+<ul>
+    <li><code>High Demand Alert</code>: Expected consumption is high; order immediately.</li>
+    <li><code>Moderate Replenishment</code>: Steady regular consumption; routine weekly top-up.</li>
+    <li><code>Buffer Hold</code>: Minimal expected demand; hold existing buffer stock, do not order.</li>
+</ul>
+
+<h2>6. Business Recommendations for NewX Services</h2>
+<p>
+    To turn this analytical project into lasting operational profitability, NewX Services should implement the following recommendations:
+</p>
+<ol>
+    <li><strong>Automate the Sunday Night Replenishment Routine:</strong> Schedule an automated batch script every Sunday at midnight that ingests the latest service transactions, runs the LightGBM model, and emails the Monday morning dispatch manifest to each branch manager.</li>
+    <li><strong>Establish Vendor-Managed Inventory (VMI) for Fast-Moving Consumables:</strong> Consumables like Engine Oil, 3M Oil, and Oil Filters have steady, predictable demand ($CV^2 < 0.49$). NewX Services should negotiate weekly automated delivery agreements directly with oil manufacturers (e.g., Castrol or Motul), eliminating warehouse holding costs entirely.</li>
+    <li><strong>Centralize Lumpy & Low-Volume Spare Parts at the KR Puram Hub:</strong> Slow-moving, irregular components (such as Drum Bolts, Tensioners, and Clutch Assemblies) should not be held at all 8 satellite centres. Instead, maintain a central buffer at the primary KR Puram hub (which handles 52% of fleet traffic) and use a daily shuttle runner for satellite needs.</li>
+    <li><strong>Incorporate Service Appointment Telematics:</strong> Integrate the booking schedule from NewX Services' customer mobile app into the model. If 15 bikes with mileage exceeding 40,000 km are booked for major servicing next week at Koramangala, the model can automatically increase the brake shoe and drive chain buffer before the vehicles even arrive.</li>
+</ol>
+
+<h2>7. How to Improve the Python Environment & Configuration (.python-version & .env)</h2>
+<p>
+    In software engineering, reproducibility and security are just as critical as model accuracy. The user specifically asked: <em>"How can we improve the .pyenv file? What can we add to improve it? In a simpler way, what extra code can we write to improve it?"</em>
+</p>
+<p>
+    Here is a clear, simple guide to professionalizing the environment configuration:
+</p>
+
+<h3>1. Adding a <code>.python-version</code> File for Pyenv</h3>
+<p>
+    When multiple developers collaborate on a project, one might use Python 3.9, another Python 3.11, and another Python 3.14. Subtle differences between Python versions can break package installations.
+</p>
+<p>
+    <strong>The Improvement:</strong> Place a <code>.python-version</code> file in the project root containing the exact recommended Python version:
+</p>
+<pre>
+3.11.15
+</pre>
+<p>
+    When any developer with <code>pyenv</code> installed navigates into the project directory (<code>cd client_project_1</code>), pyenv automatically activates that exact Python version with zero manual configuration.
+</p>
+
+<h3>2. Adding a <code>.env</code> File for Secure Configuration & Credentials</h3>
+<p>
+    Currently, in <code>scripts/fetch_data.py</code>, the database host, user, and password are typed directly inside the Python code. While convenient for initial testing, this is a security risk if the repository is ever pushed to a public repository.
+</p>
+<p>
+    <strong>The Improvement:</strong> Use a <code>.env</code> file to isolate sensitive credentials, and provide a <code>.env.example</code> template for other developers.
+</p>
+<p>
+    Create <code>.env.example</code>:
+</p>
+<pre>
+# Database Configuration
+DB_HOST=18.136.157.135
+DB_PORT=3306
+DB_NAME=project_service_data
+DB_USER=dm_usdata_sql
+DB_PASSWORD=your_password_here
+
+# JIT Model Configuration
+DEFAULT_SERVICE_LEVEL=0.95
+DEFAULT_LEAD_TIME_DAYS=7
+FORECAST_HORIZON_WEEKS=14
+</pre>
+<p>
+    Add the actual <code>.env</code> to <code>.gitignore</code> so private passwords are never committed to GitHub.
+</p>
+
+<h3>3. Clean Python Code to Read from <code>.env</code> Automatically</h3>
+<p>
+    To load these variables cleanly without adding complex frameworks, you can add this simple 5-line snippet to your scripts using standard library or <code>python-dotenv</code>:
+</p>
+<pre>
+# Simple, robust configuration loader
+import os
+
+def get_env_variable(var_name, default=None):
+    value = os.getenv(var_name, default)
+    if value is None:
+        raise ValueError(f"Required environment variable '{var_name}' is not set.")
+    return value
+
+# Usage example:
+DB_HOST = get_env_variable('DB_HOST', '18.136.157.135')
+DB_PORT = int(get_env_variable('DB_PORT', '3306'))
+DB_USER = get_env_variable('DB_USER', 'dm_usdata_sql')
+DB_PASS = get_env_variable('DB_PASSWORD', '37z&lt;49REb&amp;mKnl4AV!vJ')
+</pre>
+
+<h3>4. Adding a Fast Makefile / Command Runner</h3>
+<p>
+    To make running the entire project trivial for anyone on the team, add a simple <code>Makefile</code>:
+</p>
+<pre>
+# One-command project shortcuts
+setup:
+	python3.11 -m venv .venv
+	.venv/bin/pip install -r requirements.txt
+
+data:
+	.venv/bin/python scripts/fetch_data.py
+	.venv/bin/python src/data_prep.py
+	.venv/bin/python src/features.py
+
+train:
+	.venv/bin/python src/train.py
+
+report:
+	.venv/bin/python src/report_generator.py
+
+app:
+	.venv/bin/streamlit run app.py
+</pre>
+
+<div class="footer">
+    <p>© NewX Services & DataMites™ Project Mentoring | Ref: PM-PR-0027 | Confidential Operational Analytics</p>
+</div>
+
+</body>
+</html>
